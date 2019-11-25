@@ -33,7 +33,7 @@ jobs:
     - name: build release 
       run: ./gradlew assembleRelease
     - name: upload artefact to App Center
-      uses: joabalea/App-Center-action@v1.0.0
+      uses: joabalea/App-Center-action@v1.0.2
       with:
         command: appcenter distribute stores publish -s Beta -f app/build/outputs/apk/release/app-release-unsigned.apk -r releaseNote -a user/app
         token: ${{secrets.APP_CENTER_TOKEN}}
