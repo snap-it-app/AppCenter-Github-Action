@@ -9,5 +9,5 @@ jobs:
       - name: Upload aab file to production track of the Play Store
         uses: ./
         with:
-          command: appcenter distribute stores publish -s Alpha -f app/build/outputs/apk/release/app-release-unsigned.apk -r 'Release note' -a user/app
+          command: appcenter distribute stores publish -s Alpha -f app/build/outputs/apk/release/app-release-unsigned.apk -r note -a user/app
           token: Test Token
