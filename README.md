@@ -1,6 +1,6 @@
 # App Center Github Action
 
-This action uploads artefacts (.apk or .ipa) to Visual Studio App Center.
+This action run any App Center CLI command.
 
 ## Inputs
 
@@ -35,6 +35,6 @@ jobs:
     - name: upload artefact to App Center
       uses: joabalea/App-Center-action@v1.0.0
       with:
-        command: appcenter distribute stores publish -s Beta -f app/build/outputs/apk/release/app-release-unsigned.apk -r "Release note" -a user/app
+        command: appcenter distribute stores publish -s Beta -f app/build/outputs/apk/release/app-release-unsigned.apk -r releaseNote -a user/app
         token: ${{secrets.APP_CENTER_TOKEN}}
 ```
