@@ -6,10 +6,8 @@ jobs:
     steps:
       - name: Checkout 
         uses: actions/checkout@master
-      - name: Upload artefact to AppCenter  
+      - name: Upload aab file to production track of the Play Store
         uses: ./
         with:
-          appName: Test Name 
+          command: appcenter distribute stores publish -s Beta -f app/build/outputs/apk/release/app-release-unsigned.apk -r "Release note" -a user/app
           token: Test Token
-          group: Test Group 
-          file: Test File
