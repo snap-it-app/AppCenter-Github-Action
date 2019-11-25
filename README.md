@@ -32,7 +32,7 @@ jobs:
         java-version: 1.8
     - name: build release 
       run: ./gradlew assembleRelease
-    - name: upload artefact to App Center
+    - name: run any App Center CLI command
       uses: joabalea/App-Center-action@v1.0.2
       with:
         command: appcenter distribute stores publish -s Beta -f app/build/outputs/apk/release/app-release-unsigned.apk -r releaseNote -a user/app
