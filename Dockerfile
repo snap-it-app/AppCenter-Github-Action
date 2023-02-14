@@ -1,4 +1,4 @@
-FROM node:dubnium-alpine
+FROM node:14-alpine
 
 WORKDIR /app
 COPY . /app
